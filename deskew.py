@@ -45,7 +45,7 @@ def v_rot(img, angel, shape, max_angel):
 
 def skew_detection(image_gray):
     h, w = image_gray.shape[:2]
-    eigen = cv2.cornerEigenValsAndVecs(image_gray,12, 5)
+    eigen = cv2.cornerEigenValsAndVecs(image_gray,18, 7)
     angle_sur = np.zeros(180,np.uint)
     eigen = eigen.reshape(h, w, 3, 2)
     flow = eigen[:,:,2]
